@@ -2,6 +2,10 @@ package dominio;
 
 import java.util.LinkedList;
 
+/**
+	La clase Alianza, esta desarrollada para almacenar diferentes usuarios dentro de una Alianza.
+*/
+
 public class Alianza {
 
 	String nombre;
