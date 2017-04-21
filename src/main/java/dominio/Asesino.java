@@ -1,5 +1,11 @@
 package dominio;
 
+/**
+	La clase Asesino, es una clase que hereda de Casta y es donde se definen las 3 
+	distintas habilidades de un personaje perteneciente a esta clase, las cuales
+	son "Golpe Crítico", "Aumentar Evasion" y "Robar".
+*/
+
 public class Asesino extends Casta {
 
 	public Asesino(double prob_crit, double evasion, double daño_crit) {
@@ -25,7 +31,7 @@ public class Asesino extends Casta {
 		}
 		return false;
 	}
-
+	
 	// Aumentar Evasion
 	public boolean habilidad2(Personaje caster, Peleable atacado) {
 		if (caster.getEnergia() > 10) {
