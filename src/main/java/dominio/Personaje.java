@@ -2,6 +2,12 @@ package dominio;
 
 import java.io.Serializable;
 
+/**
+	La clase Personaje contiene todos los atributos que cada Personaje va a tener 
+	(Salud, Fuerza, Experiencia, etc.), asi como tambien contiene los metodos que
+	van a afectar los atributos del personaje.
+*/
+
 public abstract class Personaje implements Peleable, Serializable {
 
 	protected int salud;
@@ -335,7 +341,10 @@ public abstract class Personaje implements Peleable, Serializable {
 		}
 		return daño;
 	}
-
+/**
+	El metodo "serCurado" se encarga de aumentar la salud del personaje
+	verificando que no se sobrepase de la salud maxima.
+*/
 	public void serCurado(int salud) {
 		if ((this.salud + salud) <= this.saludTope)
 			this.salud += salud;
@@ -376,7 +385,10 @@ public abstract class Personaje implements Peleable, Serializable {
 		} else
 			return false;
 	}
-
+/**
+	El metodo "AsignarPuntosSkills" asigna puntos a fuerza, destreza e inteligencia
+	siempre y cuando este aumento no produzca que el atributo supere la cantidad 200
+*/
 	public void AsignarPuntosSkills(int fuerza, int destreza, int inteligencia) {
 		if (this.fuerza + fuerza <= 200)
 			this.fuerza += fuerza;
